@@ -12,31 +12,21 @@ body {
   margin: 0;
   font-family: 'Inter', system-ui;
   color: #e5e7eb;
-  background: #050505;
-  overflow-x: hidden;
+  background: linear-gradient(135deg, #020617, #020617, #0f172a);
+  scroll-behavior: smooth;
 }
 
-/* PREMIUM DARK BACKGROUND */
-.background {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(75,85,99,0.15), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(107,114,128,0.12), transparent 50%),
-    linear-gradient(120deg, #000000, #0a0a0a, #050505);
-}
-
-/* SUBTLE MOVEMENT */
-.background::after {
+/* BACKGROUND */
+body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   width: 200%;
   height: 200%;
   background:
-    radial-gradient(circle, rgba(156,163,175,0.08), transparent 60%);
-  animation: move 18s infinite linear;
+    radial-gradient(circle at 20% 30%, rgba(59,130,246,0.15), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(99,102,241,0.12), transparent 50%);
+  animation: move 14s infinite linear;
+  z-index: -1;
 }
 
 @keyframes move {
@@ -45,7 +35,24 @@ body {
   100% { transform: translate(0,0); }
 }
 
-/* LAYOUT */
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(2,6,23,0.7);
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #1e293b;
+}
+
+.navbar a {
+  margin: 0 15px;
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: auto;
@@ -60,30 +67,20 @@ body {
 
 .hero h1 {
   font-size: 52px;
-  font-weight: 600;
-  color: #f9fafb;
 }
 
-.hero p {
-  font-size: 18px;
-  color: #9ca3af;
-  max-width: 700px;
-  margin: 10px auto;
-  line-height: 1.6;
+/* TYPING TEXT */
+#typing {
+  color: #6366f1;
+  font-weight: 500;
 }
 
 /* BUTTONS */
-.buttons {
-  margin-top: 20px;
-}
-
 .buttons a {
-  display: inline-block;
   padding: 12px 22px;
   margin: 6px;
   border-radius: 10px;
   text-decoration: none;
-  font-size: 14px;
   transition: 0.3s;
 }
 
@@ -93,23 +90,29 @@ body {
 }
 
 .secondary {
-  border: 1px solid #374151;
-  color: #e5e7eb;
+  border: 1px solid #334155;
+  color: white;
 }
 
 .buttons a:hover {
   transform: translateY(-2px);
 }
 
-/* SECTION */
+/* SECTIONS */
 section {
-  padding: 70px 0;
-  border-top: 1px solid #111827;
+  padding: 80px 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-size: 30px;
 }
 
 /* GRID */
@@ -118,28 +121,29 @@ h2 {
   gap: 20px;
 }
 
-/* CARDS */
+/* GLASS CARDS */
 .card {
-  background: rgba(17,24,39,0.6);
-  padding: 24px;
-  border-radius: 14px;
-  border: 1px solid rgba(75,85,99,0.2);
-  backdrop-filter: blur(8px);
+  background: rgba(15,23,42,0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99,102,241,0.2);
+  padding: 22px;
+  border-radius: 12px;
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(156,163,175,0.3);
+  transform: translateY(-6px);
+  border-color: #6366f1;
+  box-shadow: 0 0 20px rgba(99,102,241,0.2);
 }
 
-/* TAGS */
+/* TAG */
 .tag {
   display: inline-block;
-  padding: 6px 12px;
-  background: rgba(55,65,81,0.6);
-  margin: 5px;
-  border-radius: 8px;
+  padding: 6px 10px;
+  background: #1e293b;
+  margin: 4px;
+  border-radius: 6px;
   font-size: 12px;
 }
 
@@ -148,121 +152,129 @@ h2 {
 
 <body>
 
-<div class="background"></div>
+<!-- NAVBAR -->
+<div class="navbar">
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
 
 <div class="container">
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Gayathri Chandana Gunimini</h1>
+<h1>Hi, this is Gayathri Chandana Gunimini</h1>
 
-  <p>
-  Cloud Engineer specializing in AWS, system reliability, and scalable infrastructure.  
-  I design and build cloud-driven solutions backed by strong engineering fundamentals and real-world project experience.
-  </p>
+<p id="typing"></p>
 
-  <p>
-  Focused on cloud operations, DevOps practices, and distributed systems, with a foundation in electronics and system-level architecture.
-  </p>
-
-  <div class="buttons">
-    <a href="https://github.com/gayathri02-hub" class="primary">View GitHub</a>
-    <a href="https://linkedin.com/in/gayathrireddy02" class="secondary">LinkedIn</a>
-    <a href="mailto:guniminigayathrims2@gmail.com" class="secondary">Contact</a>
-  </div>
+<div class="buttons">
+<a href="https://github.com/gayathri02-hub" class="primary">GitHub</a>
+<a href="https://linkedin.com/in/gayathrireddy02" class="secondary">LinkedIn</a>
+<a href="mailto:guniminigayathrims2@gmail.com" class="secondary">Contact</a>
+</div>
 </div>
 
 <!-- ABOUT -->
-<section>
+<section id="about">
 <h2>About</h2>
-
 <div class="card">
 <p>
-I am currently pursuing a Master’s in Cloud Computing at the National College of Ireland, with hands-on experience in AWS, Docker, CI/CD, and machine learning-based systems.
+Cloud Computing postgraduate with experience in AWS, Docker, CI/CD, and scalable system design.
 </p>
-
 <p>
-My work focuses on building scalable, efficient, and secure cloud solutions, including intrusion detection systems, data-driven applications, and automated deployment pipelines.
-</p>
-
-<p>
-With a background in Electronics and Communication Engineering, I bring strong knowledge in system design, networking, and embedded systems — enabling me to understand how real-world systems integrate with cloud infrastructure.
-</p>
-
-<p>
-I am actively seeking opportunities in Cloud Support, DevOps, and Cloud Engineering roles where I can contribute to infrastructure stability, monitoring, and system optimization.
+Strong foundation in Electronics Engineering, enabling deep understanding of system architecture and networking.
 </p>
 </div>
+</section>
 
+<!-- EXPERIENCE -->
+<section id="experience">
+<h2>Experience</h2>
+<div class="grid">
+<div class="card">Salesforce Internship - Cloud CRM systems</div>
+<div class="card">Retail Operations - Problem solving & support</div>
+</div>
 </section>
 
 <!-- SKILLS -->
-<section>
-<h2>Technical Skills</h2>
-
+<section id="skills">
+<h2>Skills</h2>
 <div class="card">
 <span class="tag">AWS</span>
 <span class="tag">Docker</span>
-<span class="tag">CI/CD</span>
 <span class="tag">Linux</span>
 <span class="tag">Python</span>
-<span class="tag">SQL</span>
 <span class="tag">Networking</span>
-<span class="tag">Troubleshooting</span>
 </div>
-
 </section>
 
 <!-- PROJECTS -->
-<section>
+<section id="projects">
 <h2>Projects</h2>
-
 <div class="grid">
 
 <div class="card">
-<h3>IoT Botnet Detection System</h3>
-<p>Designed a lightweight intrusion detection system using machine learning, deployed in Docker containers simulating edge-cloud environments.</p>
+<h3>IoT Botnet Detection</h3>
+<p>ML system deployed using Docker.</p>
 </div>
 
 <div class="card">
 <h3>House Price Prediction</h3>
-<p>Built a regression-based prediction system and deployed using Streamlit for interactive visualization.</p>
+<p>Streamlit deployment.</p>
 </div>
 
 <div class="card">
-<h3>Smart Dam IoT System</h3>
-<p>Developed a real-time monitoring system using ESP32 and sensors, integrating data collection and remote monitoring.</p>
+<h3>Bookshelf CI/CD</h3>
+<p>AWS CodePipeline project.</p>
 </div>
 
 <div class="card">
-<h3>Turbo Code VLSI Design</h3>
-<p>Implemented Turbo Encoder and Decoder using Verilog for LTE communication systems with ASIC-level design considerations.</p>
+<h3>Smart Dam IoT</h3>
+<p>Real-time monitoring system.</p>
 </div>
 
 </div>
-
-</section>
-
-<!-- CERTIFICATIONS -->
-<section>
-<h2>Certifications</h2>
-
-<div class="grid">
-
-<div class="card">AWS Certification</div>
-<div class="card">Salesforce Certification</div>
-
-</div>
-
 </section>
 
 <!-- CONTACT -->
-<section>
+<section id="contact">
 <h2>Contact</h2>
 <p>Email: guniminigayathrims2@gmail.com</p>
 </section>
 
 </div>
+
+<!-- JS -->
+<script>
+
+/* typing effect */
+const text = "Cloud Engineer | AWS | DevOps | Scalable Systems";
+let i = 0;
+
+function typing(){
+  if(i < text.length){
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 50);
+  }
+}
+typing();
+
+/* scroll reveal */
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      sec.classList.add("show");
+    }
+  });
+});
+
+</script>
 
 </body>
 </html>
