@@ -1,162 +1,1635 @@
-<!-- ONLY showing changed parts clearly — your full file remains SAME -->
+Conversation starred. 
 
-<title>Gayathri Chandana Gunimini</title>
+Skip to content
+Using Gmail with screen readers
+Conversations
+12% of 15 GB used
+Terms · Privacy · Programme Policies
+Last account activity: 2 hours ago
+Details
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title> Chandra Sekhar Reddy Mettu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* ========= RESET & BASE ========= */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<div class="logo-orb-inner">GC</div>
+    :root {
+      --bg-main: #7082c4;
+      --bg-alt: #020817;
+      --accent: #38bdf8;
+      --accent-2: #a855f7;
+      --accent-3: #f97316;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --card: rgba(15, 23, 42, 0.9);
+      --border-soft: rgba(148, 163, 184, 0.4);
+      --radius-lg: 1.5rem;
+      --radius-md: 0.9rem;
+      --shadow-strong: 0 30px 80px rgba(15, 23, 42, 0.9);
+      --shadow-soft: 0 16px 50px rgba(15, 23, 42, 0.85);
+      --transition-fast: 0.18s ease-out;
+      --transition: 0.28s ease;
+      --max-width: 1100px;
+    }
 
-<div class="logo-text-main">Gayathri Chandana Gunimini</div>
-<div class="logo-text-sub">Cloud Engineer · Cloud Support · DevOps</div>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 0 0, #0b1120 0, #020617 40%, #020617 100%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
 
-<h1 class="hero-title">
-  Hi, I'm <span>Gayathri Chandana Gunimini</span><br />
-  Cloud Engineer & DevOps Enthusiast
-</h1>
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-<p class="hero-subtitle">
-  I build scalable cloud solutions using <strong>AWS, Docker, and CI/CD pipelines</strong>, 
-  with a strong foundation in system design and engineering. 
-  Currently pursuing <strong>MSc in Cloud Computing</strong> at National College of Ireland 
-  and actively seeking Cloud Engineer and Cloud Support roles.
-</p>
+    /* ========= BACKGROUND ANIMATION ========= */
+    .bg-orbit {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      z-index: -2;
+    }
 
-<div class="chip-row">
-  <div class="chip">AWS</div>
-  <div class="chip">Docker</div>
-  <div class="chip">CI/CD</div>
-  <div class="chip">Linux</div>
-  <div class="chip">Python</div>
-  <div class="chip">Networking</div>
-</div>
+    .bg-orbit span {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(40px);
+      opacity: 0.6;
+      mix-blend-mode: screen;
+      animation: float 18s linear infinite alternate;
+    }
 
-<div class="hero-contact">
-  📧 <a href="mailto:guniminigayathrims2@gmail.com">guniminigayathrims2@gmail.com</a> ·
-  📱 <span>+353 0894970916</span> ·
-  🔗 <a href="https://linkedin.com/in/gayathrireddy02" target="_blank">LinkedIn</a> ·
-  🐙 <a href="https://github.com/gayathri02-hub" target="_blank">GitHub</a>
-</div>
+    .bg-orbit span:nth-child(1) {
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, #38bdf8, transparent 60%);
+      top: -80px;
+      left: -40px;
+    }
 
-<div class="hero-panel-title">Cloud Engineer</div>
+    .bg-orbit span:nth-child(2) {
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, #352e28, transparent 60%);
+      bottom: -120px;
+      right: -50px;
+      animation-duration: 22s;
+    }
 
-<div class="hero-panel-sub">Dublin · Open to work</div>
+    .bg-orbit span:nth-child(3) {
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, #a855f7, transparent 60%);
+      top: 30%;
+      right: 20%;
+      animation-duration: 26s;
+    }
 
-<div class="hero-panel-item-value">
-  MSc Cloud Computing<br />National College of Ireland
-</div>
+    @keyframes float {
+      0% { transform: translate3d(0,0,0) scale(1); }
+      100% { transform: translate3d(40px, -30px, 0) scale(1.08); }
+    }
 
-<div class="hero-panel-item-value">
-  B.Tech ECE<br />VNITSW, India
-</div>
+    /* ========= LAYOUT ========= */
+    .wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.4rem;
+    }
 
-<div class="hero-panel-tag">AWS</div>
-<div class="hero-panel-tag">Docker</div>
-<div class="hero-panel-tag">CI/CD</div>
-<div class="hero-panel-tag">Linux</div>
-<div class="hero-panel-tag">Cloud Security</div>
+    /* ========= NAVBAR ========= */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(2, 6, 23, 0.96),
+        rgba(2, 6, 23, 0.88),
+        transparent
+      );
+      border-bottom: 1px solid rgba(30, 64, 175, 0.75);
+    }
 
-<div class="hero-panel-note">
-  Cloud Engineer focused on scalable systems, DevOps workflows, and cloud-native applications.
-</div>
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7rem 0;
+    }
 
-<p>
-I completed my B.Tech in Electronics and Communication Engineering, where I developed strong knowledge in system design, networking, and embedded systems.
-</p>
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
 
-<p>
-Currently pursuing MSc in Cloud Computing at National College of Ireland, focusing on AWS, DevOps, and scalable cloud infrastructure.
-</p>
+    .logo-orb {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: conic-gradient(
+        from 180deg,
+        #38bdf8,
+        #22c55e,
+        #eab308,
+        #ec4899,
+        #38bdf8
+      );
+      padding: 2px;
+      position: relative;
+      overflow: hidden;
+      animation: spin 12s linear infinite;
+    }
 
-<p>
-I have worked on multiple real-world projects including intrusion detection systems using machine learning, IoT-based monitoring systems, and cloud deployment pipelines.
-</p>
+    @keyframes spin {
+      to { transform: rotate(1turn); }
+    }
 
-<p>
-I aim to build reliable cloud systems and contribute to infrastructure stability, monitoring, and automation.
-</p>
+    .logo-orb-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: radial-gradient(circle at 30% 20%, #020617, #020617 65%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e5e7eb;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
 
-<h4>Cloud & DevOps</h4>
-<span class="skill-tag">AWS</span>
-<span class="skill-tag">Docker</span>
-<span class="skill-tag">CI/CD</span>
-<span class="skill-tag">CodePipeline</span>
-<span class="skill-tag">Linux</span>
-<h3>IoT Botnet Detection (Thesis)</h3>
-<ul>
-<li>Developed ML-based intrusion detection using Random Forest and One-Class SVM</li>
-<li>Deployed using Docker containers in edge-cloud environment</li>
-<li>Evaluated using latency, CPU usage, and F1-score</li>
-</ul>
+    .logo-text-main {
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      font-size: 0.9rem;
+    }
 
-<h4>Programming</h4>
-<span class="skill-tag">Python</span>
-<span class="skill-tag">SQL</span>
+    .logo-text-sub {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
 
-<h4>Electronics Engineering</h4>
-<span class="skill-tag">VLSI</span>
-<span class="skill-tag">Verilog</span>
-<span class="skill-tag">Embedded Systems</span>
-<span class="skill-tag">Signal Processing</span>
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+      align-items: center;
+    }
 
-<h3>IoT Botnet Detection (Thesis)</h3>
-<ul>
-<li>Developed ML-based intrusion detection using Random Forest and One-Class SVM</li>
-<li>Deployed using Docker containers in edge-cloud environment</li>
-<li>Evaluated using latency, CPU usage, and F1-score</li>
-</ul>
+    .nav-links a {
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+      color: var(--muted);
+      transition: var(--transition-fast);
+    }
 
-<h3>Ireland House Price Prediction</h3>
-<ul>
-<li>Built Linear Regression model</li>
-<li>Deployed using Streamlit</li>
-<li>Interactive dashboard for predictions</li>
-</ul>
+    .nav-links a:hover {
+      color: #f9fafb;
+      background: rgba(15, 23, 42, 0.9);
+    }
 
-<h3>Bookshelf Application</h3>
-<ul>
-<li>Implemented CI/CD pipeline using AWS CodePipeline</li>
-<li>Automated deployment workflows</li>
-</ul>
+    .nav-cta {
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.8);
+      padding: 0.35rem 0.9rem;
+      font-size: 0.8rem;
+      background: radial-gradient(circle at top left, #0ea5e9, #1d4ed8);
+      color: #e0f2fe;
+      box-shadow: 0 10px 28px rgba(37, 99, 235, 0.7);
+      white-space: nowrap;
+      transition: var(--transition-fast);
+    }
 
-<h3>Turbo Code VLSI</h3>
-<ul>
-<li>Designed encoder & decoder using Verilog</li>
-<li>Applied in LTE communication systems</li>
-</ul>
+    .nav-cta:hover {
+      transform: translateY(-1px) scale(1.02);
+      box-shadow: 0 14px 40px rgba(56, 189, 248, 0.9);
+    }
 
-<h3>Smart Dam IoT</h3>
-<ul>
-<li>Built IoT monitoring system using ESP32</li>
-<li>Real-time data tracking and alerts</li>
-</ul>
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
 
-<div class="timeline-title">Salesforce Virtual Internship</div>
-<ul>
-<li>Worked on cloud-based CRM systems</li>
-<li>Understood enterprise cloud workflows</li>
-</ul>
+    .nav-toggle span {
+      width: 22px;
+      height: 2px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      transition: var(--transition-fast);
+    }
 
-<div class="timeline-title">The Range – Operations Associate</div>
-<ul>
-<li>Handled real-time operations and backend systems</li>
-<li>Improved troubleshooting and customer handling</li>
-</ul>
+    .nav-links-mobile {
+      display: none;
+      flex-direction: column;
+      gap: 0.2rem;
+      padding: 0 0 0.8rem;
+      font-size: 0.88rem;
+    }
 
-<div class="timeline-title">GIGAMADE – Admin Assistant</div>
-<ul>
-<li>Managed documentation and workflows</li>
-<li>Improved coordination and reporting</li>
-</ul>
+    .nav-links-mobile a {
+      padding: 0.4rem 0.5rem;
+      border-radius: 0.7rem;
+      color: var(--muted);
+    }
 
-<li>AWS Certification</li>
-<li>Salesforce Certification</li>
+    .nav-links-mobile a:hover {
+      background: rgba(15, 23, 42, 0.96);
+      color: #f9fafb;
+    }
 
-<strong>Email</strong>
-<a href="mailto:guniminigayathrims2@gmail.com">guniminigayathrims2@gmail.com</a>
+    header.nav-mobile-open .nav-links-mobile {
+      display: flex;
+    }
 
-<strong>Phone</strong>
-<span>+353 0894970916</span>
+    header.nav-mobile-open .nav-toggle span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+    header.nav-mobile-open .nav-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+    header.nav-mobile-open .nav-toggle span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
 
-<strong>Location</strong>
-<span>Dublin, Ireland</span>
+    /* ========= HERO ========= */
+    .hero {
+      padding: 3.6rem 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(0, 1.1fr);
+      gap: 2.3rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #a5b4fc;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 3vw + 1.4rem, 3.2rem);
+      line-height: 1.1;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(120deg, #38bdf8, #a855f7, #f97316);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 1.1rem;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 0.22rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(55, 65, 81, 0.95);
+      background: rgba(15, 23, 42, 0.96);
+      color: #e5e7eb;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: var(--transition);
+      background: none;
+      color: inherit;
+    }
+
+    .btn-primary {
+      border-color: rgba(56, 189, 248, 0.8);
+      background: radial-gradient(circle at top left, #0ea5e9, #1d4ed8);
+      color: #e0f2fe;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: var(--shadow-strong);
+    }
+
+    .btn-ghost {
+      border-color: #1f2937;
+      background: rgba(15, 23, 42, 0.96);
+      color: var(--text);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(75, 85, 99, 1);
+      background: rgba(15, 23, 42, 1);
+    }
+
+    .hero-contact {
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+
+    .hero-contact a {
+      color: #93c5fd;
+    }
+
+    .hero-visual {
+      position: relative;
+      perspective: 1100px;
+    }
+
+    .hero-panel {
+      border-radius: 1.8rem;
+      border: 1px solid rgba(30, 64, 175, 0.95);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), #020617);
+      padding: 1.3rem 1.2rem;
+      min-height: 240px;
+      box-shadow: var(--shadow-strong);
+      position: relative;
+      overflow: hidden;
+      transform-style: preserve-3d;
+      transform: rotateX(10deg) rotateY(-10deg);
+      animation: heroFloat 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroFloat {
+      0% { transform: rotateX(10deg) rotateY(-10deg) translateY(0); }
+      100% { transform: rotateX(14deg) rotateY(-4deg) translateY(-4px); }
+    }
+
+    .hero-panel-glow {
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.18), transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(168, 85, 247, 0.18), transparent 60%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .hero-panel-content {
+      position: relative;
+      z-index: 1;
+      font-size: 0.85rem;
+    }
+
+    .hero-panel-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #a5b4fc;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-panel-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-panel-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-panel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.6rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-panel-item {
+      border-radius: 0.8rem;
+      padding: 0.4rem 0.55rem;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(51, 65, 85, 0.9);
+    }
+
+    .hero-panel-item-label {
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.1rem;
+    }
+
+    .hero-panel-item-value {
+      font-size: 0.8rem;
+    }
+
+    .hero-panel-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-panel-tag {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      background: rgba(15, 23, 42, 0.96);
+    }
+
+    .hero-panel-note {
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+
+    .hero-orbit-ring {
+      position: absolute;
+      inset: -30px;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.3);
+      animation: orbitSpin 40s linear infinite;
+      pointer-events: none;
+    }
+
+    .hero-orbit-dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: radial-gradient(circle, #38bdf8, transparent 60%);
+      top: 12%;
+      right: 16%;
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.8);
+    }
+
+    @keyframes orbitSpin {
+      to { transform: rotate(1turn); }
+    }
+
+    /* ========= SECTIONS GENERAL ========= */
+    section {
+      padding: 3rem 0;
+    }
+
+    .section-heading {
+      margin-bottom: 1.6rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #a5b4fc;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    /* ========= ABOUT ========= */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 2rem;
+    }
+
+    .about-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .about-text p + p {
+      margin-top: 0.7rem;
+    }
+
+    .about-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.9rem;
+    }
+
+    .about-badge {
+      font-size: 0.75rem;
+      padding: 0.22rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: rgba(15, 23, 42, 0.96);
+      color: #e5e7eb;
+    }
+
+    .about-summary {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 0.7rem;
+      font-size: 0.86rem;
+    }
+
+    .about-summary-item {
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      background: rgba(15, 23, 42, 0.96);
+      padding: 0.6rem 0.7rem;
+    }
+
+    .about-summary-item span {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .about-summary-item strong {
+      font-size: 0.88rem;
+      color: #e5e7eb;
+    }
+
+    .about-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(30, 64, 175, 0.9);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), rgba(15, 23, 42, 0.96));
+      padding: 1rem 1.15rem;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.84rem;
+    }
+
+    .about-card h4 {
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .about-card-list {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .about-card-list li {
+      margin-bottom: 0.3rem;
+      padding-left: 0.9rem;
+      position: relative;
+    }
+
+    .about-card-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.7rem;
+      top: 3px;
+    }
+
+    /* ========= SKILLS ========= */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      background: rgba(15, 23, 42, 0.96);
+      padding: 0.9rem 1rem;
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.9);
+      font-size: 0.86rem;
+      position: relative;
+      overflow: hidden;
+      transform: translateY(10px);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .skill-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 60%);
+      opacity: 0;
+      transition: var(--transition-fast);
+      pointer-events: none;
+    }
+
+    .skill-card h4 {
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.4rem;
+    }
+
+    .skill-tag {
+      font-size: 0.74rem;
+      border-radius: 999px;
+      padding: 0.18rem 0.6rem;
+      border: 1px solid rgba(55, 65, 81, 0.95);
+      background: rgba(15, 23, 42, 1);
+    }
+
+    .skill-meter {
+      margin-top: 0.6rem;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(30, 64, 175, 0.6);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .skill-meter-fill {
+      height: 100%;
+      width: 0;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #38bdf8, #a855f7, #f97316);
+      transition: width 1s ease-out;
+    }
+
+    .skill-card.in-view {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .skill-card.in-view::after {
+      opacity: 1;
+    }
+
+    /* ========= PROJECTS ========= */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.65fr) minmax(0, 1.05fr);
+      gap: 1.7rem;
+    }
+
+    .project-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(30, 64, 175, 0.9);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), rgba(15, 23, 42, 0.98));
+      padding: 1rem 1.1rem;
+      box-shadow: var(--shadow-strong);
+      font-size: 0.9rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card h3 {
+      font-size: 1.04rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .project-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .project-card ul {
+      margin-left: 1rem;
+      margin-top: 0.4rem;
+    }
+
+    .project-card li {
+      margin-bottom: 0.25rem;
+    }
+
+    .project-tags {
+      margin-top: 0.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    .project-tag {
+      font-size: 0.74rem;
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.6);
+      color: #e0f2fe;
+      background: rgba(15, 23, 42, 0.96);
+    }
+
+    .project-side {
+      border-radius: var(--radius-lg);
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.96);
+      padding: 0.9rem 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .project-side h4 {
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+      color: #e5e7eb;
+    }
+
+    /* ========= EXPERIENCE ========= */
+    .timeline {
+      position: relative;
+      margin-top: 1.3rem;
+      padding-left: 1.1rem;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, #38bdf8, transparent);
+      opacity: 0.8;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 1.3rem;
+      margin-bottom: 1.1rem;
+      font-size: 0.86rem;
+      transform: translateX(-8px);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .timeline-item.in-view {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -1px;
+      top: 0.2rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: radial-gradient(circle, #38bdf8, #1d4ed8);
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.18);
+    }
+
+    .timeline-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .timeline-subtitle {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-item ul {
+      margin-left: 1rem;
+      margin-top: 0.3rem;
+    }
+
+    .timeline-item li {
+      margin-bottom: 0.2rem;
+    }
+
+    /* ========= CERTIFICATIONS & EDUCATION ========= */
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 1.3rem;
+    }
+
+    .cert-card,
+    .edu-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      background: rgba(15, 23, 42, 0.96);
+      padding: 0.9rem 1rem;
+      font-size: 0.85rem;
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.9);
+    }
+
+    .cert-card h4,
+    .edu-card h4 {
+      font-size: 0.96rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .cert-card ul,
+    .edu-card ul {
+      margin-left: 1rem;
+    }
+
+    .cert-card li,
+    .edu-card li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* ========= CONTACT ========= */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+      gap: 1.6rem;
+      align-items: center;
+    }
+
+    .contact-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(30, 64, 175, 0.9);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), rgba(15, 23, 42, 0.98));
+      padding: 1rem 1.1rem;
+      box-shadow: var(--shadow-strong);
+      font-size: 0.85rem;
+    }
+
+    .contact-row {
+      margin-top: 0.4rem;
+      font-size: 0.87rem;
+    }
+
+    .contact-row strong {
+      display: inline-block;
+      width: 80px;
+      color: #e5e7eb;
+    }
+
+    .contact-row a {
+      color: #93c5fd;
+    }
+
+    .contact-note {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.7rem;
+    }
+
+    .contact-pill-row {
+      margin-top: 0.7rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .contact-pill {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: rgba(15, 23, 42, 1);
+    }
+
+    .contact-helper {
+      font-size: 0.84rem;
+      color: var(--muted);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      background: rgba(15, 23, 42, 0.96);
+      padding: 0.85rem 0.95rem;
+    }
+
+    .contact-helper pre {
+      font-family: inherit;
+      font-size: 0.8rem;
+      white-space: pre-wrap;
+    }
+
+    footer {
+      padding: 1.7rem 0 2rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* ========= SCROLL REVEAL ========= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: var(--transition);
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========= RESPONSIVE ========= */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid,
+      .projects-grid,
+      .two-col,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero {
+        padding-top: 2.8rem;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+      .nav-toggle {
+        display: flex;
+      }
+      .hero-panel {
+        transform: none;
+        animation: heroFloatMobile 10s ease-in-out infinite alternate;
+      }
+      @keyframes heroFloatMobile {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-4px); }
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated background blobs -->
+  <div class="bg-orbit">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="wrapper">
+      <nav class="nav">
+        <div class="nav-left">
+          <div class="logo-orb">
+            <div class="logo-orb-inner">MC</div>
+          </div>
+          <div>
+            <div class="logo-text-main"> Chandra Sekhar Reddy Mettu </div>
+            <div class="logo-text-sub">Data Analyst · Backend Engineer · ML Systems</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact" class="nav-cta">Hire me</a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span><span></span><span></span>
+        </div>
+      </nav>
+      <div class="nav-links-mobile" id="nav-links-mobile">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrapper hero-grid">
+        <div class="reveal">
+          <div class="hero-kicker">Portfolio</div>
+          <h1 class="hero-title">
+            Hi, I'm <span>Chandra Sekhar Reddy Mettu </span><br />
+            Data Analyst & Backend Engineer
+          </h1>
+          <p class="hero-subtitle">
+            I build data-driven solutions using <strong>Python, SQL, and Machine Learning</strong>, 
+            with a focus on backend systems, analytics, and real-world ML applications. 
+            I recently completed my <strong>MSc in Data Analytics</strong> at Dublin Business School 
+            and am actively seeking opportunities as a Data Analyst or Backend Engineer.
+          </p>
+
+          
+          <div class="chip-row">
+            <div class="chip">Python</div>
+            <div class="chip">SQL</div>
+            <div class="chip">Tableau</div>
+            <div class="chip">Machine Learning</div>
+            <div class="chip">REST APIs</div>
+            <div class="chip">AWS</div>
+          </div>
+          
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#experience" class="btn-ghost">My Experience</a>
+          </div>
+
+          <div class="hero-contact">
+            📧 <a href="mailto:chandrareddy2046@gmail.com">chandrareddy2046@gmail.com</a> &nbsp;·&nbsp;
+            📱 <span>+353 0899676181</span> &nbsp;·&nbsp;
+            🔗 <a href="https://www.linkedin.com/in/chandra-sekhar-reddy-77871b226" target="_blank" rel="noreferrer">
+              LinkedIn Profile
+              🐙 <a href="https://github.com/Chandrareddy08-omgg" target="_blank" rel="noreferrer">
+                GitHub
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-visual reveal">
+          <div class="hero-panel">
+            <div class="hero-panel-glow"></div>
+            <div class="hero-orbit-ring"></div>
+            <div class="hero-orbit-dot"></div>
+            <div class="hero-panel-content">
+              <div class="hero-panel-label">Snapshot</div>
+              <div class="hero-panel-title">Data Analyst| Backend Engineer</div>
+              <div class="hero-panel-sub">Dublin · Open to work</div>
+
+              <div class="hero-panel-grid">
+                <div class="hero-panel-item">
+                  <div class="hero-panel-item-label">Education</div>
+                  <div class="hero-panel-item-value">
+                    MSc Data Analytics<br />Dublin Business School
+                  </div>
+                </div>
+                <div class="hero-panel-item">
+                  <div class="hero-panel-item-label">Background</div>
+                  <div class="hero-panel-item-value">
+                    B.Tech Computer Science (CSE)<br />VVIT, India · GPA: 7.0
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-panel-tags">
+                <div class="hero-panel-tag">Python</div>
+                <div class="hero-panel-tag">SQL </div>
+                <div class="hero-panel-tag">Tableau</div>
+                <div class="hero-panel-tag">Machine Learning</div>
+                <div class="hero-panel-tag">REST APIs</div>
+                <div class="hero-panel-tag">AWS </div>
+              </div>
+
+              <div class="hero-panel-note">
+                Data Analyst & Backend Engineer focused on building scalable data pipelines, 
+                ML-driven solutions, and insightful dashboards for real-world applications.
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrapper">
+        <div class="section-heading reveal">
+          <div class="section-eyebrow">About</div>
+          <div class="section-title">Who I am beyond the resume</div>
+          <p class="section-subtitle">
+            From Computer Science to building data-driven solutions and scalable systems in Dublin.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I completed my <strong>B.Tech in Computer Science and Engineering</strong> at 
+              Vasireddy Venkatadri Institute of Technology, where I developed a strong 
+              foundation in programming, problem-solving, and core computer science concepts.
+            </p>
+            <p>
+              I am Graduated in the stream of <strong> Data Analytics</strong> at Dublin Business School, 
+              focusing on data analysis, machine learning, and building intelligent systems 
+              that support real-world decision-making.
+            </p>
+            <p>
+              Through internships and projects, I have worked on data analytics, machine learning models, 
+              and backend systems — improving data quality, automating workflows, and building dashboards 
+              and ETL pipelines for scalable data processing.
+            </p>
+            <p>
+              I enjoy building practical solutions — from ML applications to data dashboards — 
+              that solve real problems. Outside of tech, I enjoy playing 
+              <strong>cricket and football</strong> and exploring creative work like video editing.
+            </p>
+
+            <div class="about-badges">
+              <div class="about-badge">Based in Dublin, Ireland</div>
+              <div class="about-badge">Open to Data & Backend roles</div>
+              <div class="about-badge">Languages:English, Telugu</div>
+            </div>
+
+            <div class="about-summary">
+              <div class="about-summary-item">
+                <span>Preferred Roles</span>
+                <strong>Data Analyst · Backend Engineer</strong>
+              </div>
+              
+              <div class="about-summary-item">
+                <span>Strengths</span>
+                <strong>Data Analysis · Problem Solving · System Design</strong>
+              </div>
+              
+              <div class="about-summary-item">
+                <span>Work Style</span>
+                <strong>Analytical · Detail-Oriented · Results-Driven</strong>
+              </div>
+            </div>
+          </div>
+
+          <aside class="about-card reveal">
+            <h4>What I bring to a team</h4>
+            <ul class="about-card-list">
+              <li>Strong foundation in data analysis using Python, SQL, and real-world datasets.</li>
+              <li>Experience building machine learning models and deploying data-driven solutions.</li>
+              <li>Ability to design and work with scalable backend systems and ETL pipelines.</li>
+              <li>Hands-on experience with dashboards and data visualization using Tableau.</li>
+              <li>Proven impact through automation, improving data quality and reducing manual effort.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="wrapper">
+        <div class="section-heading reveal">
+          <div class="section-eyebrow">Skills</div>
+          <div class="section-title">Technical skills & Tools</div>
+          <p class="section-subtitle">
+            Expertise in data analytics, machine learning, and backend development, using modern tools to build scalable and data-driven solutions.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-meter="80">
+            <h4>Programming</h4>
+            <p>Strong programming foundation with experience in building backend systems,
+              data processing workflows, and solving real-world problems.</p>
+            <div class="skills-tags">
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Data structures</span>
+              </div>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-meter-fill"></div>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" data-meter="78">
+            <h4>Data & Machine Learning</h4>
+            <p>Experience in data analysis, feature engineering, and building machine learning models 
+              to solve real-world problems using Python and advanced ML techniques.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Matplotlib</span>
+              <span class="skill-tag">scikit-learn</span>
+              <span class="skill-tag">EDA</span>
+              <span class="skill-tag">Model Evaluation</span>
+              <span class="skill-tag">SMOTE</span>
+              <span class="skill-tag">SHAP</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-meter-fill"></div>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" data-meter="75">
+            <h4>Backend & Tools</h4>
+            <p>Experience in backend development, API integration, and working with tools for version control and deployment.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">Backend Development</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">AWS</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-meter-fill"></div>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" data-meter="70">
+            <h4>Databases & Cloud</h4>
+            <p>
+              Experience in database design, SQL querying, and working with cloud platforms 
+              for scalable data storage and processing.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">SQL Server</span>
+              <span class="skill-tag">Database Design</span>
+              <span class="skill-tag">Query Optimization</span>
+              <span class="skill-tag">ETL (SSIS)</span>
+              <span class="skill-tag">AWS</span>
+            </div>
+              <div class="skill-meter">
+              <div class="skill-meter-fill"></div>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" data-meter="78">
+            <h4>Software Engineering Practices</h4>
+            <p>
+              Understanding of software development lifecycle, version control, and building reliable, maintainable applications.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">SDLC</span>
+              <span class="skill-tag">Git & Version Control</span>
+              <span class="skill-tag">Agile Practices</span>
+              <span class="skill-tag">Debugging</span>
+              <span class="skill-tag">Unit Testing</span>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-meter-fill"></div>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" data-meter="82">
+            <h4>Professional Strengths</h4>
+            <p>
+              Key strengths that support effective problem-solving, collaboration, and delivery of data-driven solutions.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Analytical Thinking</span>
+              <span class="skill-tag">Problem Solving</span>
+              <span class="skill-tag">Collaboration</span>
+              <span class="skill-tag">Adaptability</span>
+              <span class="skill-tag">Continuous Learning</span>
+            </div>
+          </div>
+            <div class="skill-meter">
+              <div class="skill-meter-fill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="wrapper">
+        <div class="section-heading reveal">
+          <div class="section-eyebrow">Projects</div>
+          <div class="section-title">What I’ve built so far</div>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <h3>Emotion Recognition using EEG Signals (Machine Learning)</h3>
+            <div class="project-meta">
+              Python · Scikit-learn · NumPy · MNE · Machine Learning
+            </div>
+            <p>
+              Developed a machine learning pipeline to classify human emotions from EEG signals, 
+              applying signal preprocessing, feature engineering, and supervised learning models.
+            </p>
+            <ul>
+              <li>Preprocessed EEG signals using filtering and noise reduction techniques.</li>
+              <li>Extracted statistical and frequency-based features from multi-channel data.</li>
+              <li>Trained and evaluated models including SVM, KNN, and Random Forest.</li>
+              <li>Improved model performance through feature selection and tuning.</li>
+              <li>Analyzed results using accuracy metrics and confusion matrices.</li>
+            </ul>
+            <div class="project-tags">
+              <div class="project-tag">Machine Learning</div>
+              <div class="project-tag">Feature Engineering</div>
+              <div class="project-tag">Signal Processing</div>
+            </div>
+          </article>
+
+          <aside class="project-side reveal">
+            <h4>Project Enhancements</h4>
+            <p>
+              Planned improvements to extend this project towards real-world deployment and scalability:
+            </p>
+            <ul>
+              <li>Developing an interactive web interface to visualize real-time emotion predictions.</li>
+              <li>Exploring deep learning models such as 1D CNNs for improved classification accuracy.</li>
+              <li>Deploying the application using a Python-based framework for end-to-end usability.</li>
+            </ul>
+            <p style="margin-top: 0.4rem;">
+              Focused on building scalable, real-time ML solutions applicable to healthcare and human behavior analytics.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
 
 
 
+    <section id="projects">
+        <div class="wrapper">
+          <div class="section-heading reveal">
+           
+          </div>
+  
+          <div class="projects-grid">
+            <article class="project-card reveal">
+              <h3>Heart Failure Prediction using Machine Learning (MSc Dissertation)</h3>
+              <div class="project-meta">
+                Python · Scikit-learn · XGBoost · SMOTE · SHAP · Machine Learning
+
+              </div>
+              <p>
+                Designed and developed an end-to-end machine learning system to predict early heart failure risk using clinical data, focusing on handling class imbalance, improving model performance, and ensuring interpretability for healthcare applications.
+              </p>  
+              <ul>
+                <li>Processed 918 clinical patient records with preprocessing, feature engineering, and scaling.</li>
+                <li>Handled class imbalance using SMOTE and reduced noise using Winsorization.</li>
+                <li>Trained models including Logistic Regression, SVM, Random Forest, KNN, and XGBoost.</li>
+                <li>Built a hybrid ensemble model (soft voting) achieving ~90%+ accuracy with high recall.</li>
+                <li>Analyzed performance using precision, recall, F1-score, AUC, and confusion matrix.</li>
+                <li>Applied SHAP for model interpretability and clinical feature importance analysis.</li>
+              </ul>
+              <div class="project-tags">
+                <div class="project-tag">Healthcare AI</div>
+                <div class="project-tag">Ensemble Learning</div>
+                <div class="project-tag">Explainable</div>
+              </div>
+            </article>
+  
+            <aside class="project-side reveal">
+              <h4>Project Highlights</h4>
+              <p>
+                Built as part of MSc Data Analytics dissertation focusing on real-world healthcare prediction challenges.
+              </p>
+              <ul>
+                <li>Achieved high recall (~94%) to minimize missed high-risk patients.</li>
+                <li>Balanced precision and recall using hybrid ensemble learning.</li>
+                <li>Developed a complete ML pipeline from preprocessing to evaluation.</li>
+              <li>Aligned model insights with clinical risk factors for real-world relevance.</li>
+            </ul>
+              <p style="margin-top: 0.4rem;">
+                Designed for deployment as a clinical decision support system for early heart failure risk prediction.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+       
+
+    <!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrapper">
+    <div class="section-heading reveal">
+      <div class="section-eyebrow">Experience</div>
+      <div class="section-title">Internships & Experience</div>
+      <p class="section-subtitle">
+        Hands-on experience in data analytics, backend development, and building real-world applications.
+      </p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- Sepnoty (MOST IMPORTANT) -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-title">Data Analyst Intern</div>
+        <div class="timeline-subtitle">Sepnoty Technologies · 2024</div>
+        <ul>
+          <li>Improved data quality by 30% through data cleaning, preprocessing, and EDA using Python and SQL.</li>
+          <li>Reduced manual effort by 40% by building automated data validation pipelines.</li>
+          <li>Developed interactive dashboards using Tableau for business insights and KPI tracking.</li>
+          <li>Built ETL workflows for efficient data ingestion and transformation.</li>
+        </ul>
+      </div>
+
+      <!-- SlashMark -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-title">Software Engineer Intern</div>
+        <div class="timeline-subtitle">SlashMark · 2024</div>
+        <ul>
+          <li>Developed backend functionality using Python and SQL for data-driven applications.</li>
+          <li>Optimized database queries to improve performance.</li>
+          <li>Collaborated using Git and GitHub within Agile workflows.</li>
+        </ul>
+      </div>
+
+      <!-- SmartInternz -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-title">Salesforce Developer Intern</div>
+        <div class="timeline-subtitle">SmartInternz · 2023</div>
+        <ul>
+          <li>Built and customized CRM workflows to automate business processes.</li>
+          <li>Integrated APIs and worked with cloud-based Salesforce applications.</li>
+          <li>Created reports and dashboards for data-driven decision making.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+    
+
+    <!-- CERTIFICATIONS & EDUCATION -->
+    <section id="certifications">
+      <div class="wrapper">
+        <div class="section-heading reveal">
+          <div class="section-eyebrow">Certifications</div>
+          <div class="section-title">Certifications & Education</div>
+        </div>
+    
+        <div class="two-col">
+    
+          <!-- CERTIFICATIONS -->
+          <div class="cert-card reveal">
+            <h4>Certifications</h4>
+            <ul>
+              <li>Applied Data Science with Python – University of Michigan (Coursera)</li>
+              <li>AWS Academy Cloud Foundations – AWS Academy</li>
+              <li>Data Analytics Program – Eduskills</li>
+              <li>Cyber Security Program – Eduskills</li>
+              <li>Full Stack Development Internship – SlashMark</li>
+              <li>Python Basics – Infosys Springboard</li>
+            </ul>
+          </div>
+    
+          <!-- EDUCATION -->
+          <div class="edu-card reveal">
+            <h4>Education</h4>
+            <ul>
+              <li>
+                <strong>MSc in Data Analytics</strong><br />
+                Dublin Business School, Ireland · 2025 – 2026
+              </li>
+              <li>
+                <strong>B.Tech in Computer Science & Engineering</strong><br />
+                VVIT, India · GPA: 7.0 · 2020 – 2024
+              </li>
+              <li>
+                <strong>Intermediate (MPC)</strong><br />
+                Vignan Junior College · GPA: 9.03
+              </li>
+              <li>
+                <strong>SSC</strong><br />
+                Vignan Residential High School · GPA: 8.8
+              </li>
+            </ul>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    <div class="wrapper">
+        <div class="section-heading reveal">
+
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <p>
+              I’m open to opportunities where I can contribute to building data-driven solutions,
+              backend systems, and scalable applications. Let’s connect to discuss how I can add value to your team.
+            </p>
+            <div class="contact-row">
+              <strong>Email</strong>
+              <a href="mailto:chandrareddy2046@gmail.com">chandrareddy2046@gmail.com</a>
+            </div>
+            <div class="contact-row">
+              <strong>Phone</strong>
+              <span>+353 0899676181</span>
+            </div>
+            <div class="contact-row">
+                <strong>LinkedIn</strong>
+                <a href="https://www.linkedin.com/in/chandra-sekhar-reddy-77871b226" target="_blank" rel="noreferrer">
+                  /chandra-sekhar-reddy-77871b226
+                </a>
+              </div>
+              
+              <div class="contact-row">
+                <strong>GitHub</strong>
+                <a href="https://github.com/Chandrareddy08-omgg" target="_blank" rel="noreferrer">
+                  /Chandrareddy08-omgg
+                </a>
+              </div>
+
+            <p class="contact-note">
+              Based in Dublin · Available for immediate start · Open to onsite, hybrid, or remote roles.
+            </p>
+            <div class="contact-pill-row">
+              <div class="contact-pill">Data Analyst</div>
+              <div class="contact-pill">Backend Engineer</div>
+              <div class="contact-pill">Machine Learning</div>
+            </div>
+          </div>
+
+         
+        </div>
+      </div>
+      </div>
+    </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Chandra Sekhar Reddy Mettu 
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById("nav-toggle");
+    const navLinksMobile = document.getElementById("nav-links-mobile");
+    const headerEl = document.querySelector("header");
+
+    navToggle.addEventListener("click", () => {
+      headerEl.classList.toggle("nav-mobile-open");
+    });
+
+    navLinksMobile.addEventListener("click", (e) => {
+      if (e.target.tagName === "A") {
+        headerEl.classList.remove("nav-mobile-open");
+      }
+    });
+
+    // Dynamic year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll reveal + animated skill meters + timeline
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+
+            if (entry.target.classList.contains("skill-card")) {
+              const meter = entry.target.querySelector(".skill-meter-fill");
+              const value = entry.target.getAttribute("data-meter") || 70;
+              if (meter) {
+                meter.style.width = value + "%";
+              }
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    document.querySelectorAll(".reveal, .timeline-item, .skill-card").forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
+Chandraa portfolio.html
+Displaying Chandraa portfolio.html.
