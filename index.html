@@ -6,125 +6,81 @@
 <title>Gayathri Portfolio</title>
 
 <style>
-html { scroll-behavior: smooth; }
-
 body {
   margin: 0;
   font-family: system-ui;
-  background: #020617;
-  color: #e2e8f0;
-  overflow-x: hidden;
+  background: black;
+  color: #e5e7eb;
 }
 
-/* Animated gradient background */
+/* Grey animated waves */
 body::before {
   content: "";
   position: fixed;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 20% 30%, #1e293b, transparent 40%),
-              radial-gradient(circle at 80% 70%, #334155, transparent 40%);
-  animation: move 15s linear infinite;
+  background:
+    radial-gradient(circle at 20% 30%, #1f2937, transparent 40%),
+    radial-gradient(circle at 80% 70%, #374151, transparent 40%);
+  animation: wave 12s infinite linear;
   z-index: -1;
 }
 
-@keyframes move {
+@keyframes wave {
   0% { transform: translate(0,0); }
-  50% { transform: translate(-60px, -60px); }
+  50% { transform: translate(-50px,-40px); }
   100% { transform: translate(0,0); }
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   padding: 20px;
 }
 
-/* HERO */
 .hero {
   text-align: center;
   padding: 100px 20px;
 }
 
-.hero h1 {
-  font-size: 52px;
-}
+.hero h1 { font-size: 50px; }
 
-.hero p {
-  color: #94a3b8;
-}
-
-/* BUTTONS */
 .buttons a {
   padding: 10px 20px;
   margin: 5px;
   border-radius: 8px;
   text-decoration: none;
-  transition: 0.3s;
 }
 
-.primary {
-  background: linear-gradient(135deg, #7c3aed, #9333ea);
-  color: white;
-}
+.primary { background: #6366f1; color: white; }
+.secondary { border: 1px solid #374151; color: white; }
 
-.secondary {
-  border: 1px solid #334155;
-  color: white;
-}
-
-.buttons a:hover {
-  transform: scale(1.05);
-}
-
-/* SECTION */
 section {
   padding: 60px 0;
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid #1f2937;
 }
 
-h2 {
-  margin-bottom: 20px;
-  font-size: 26px;
-}
-
-/* GRID */
 .grid {
   display: grid;
   gap: 20px;
 }
 
-/* CARDS */
 .card {
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid #1e293b;
+  background: rgba(17,24,39,0.7);
   padding: 20px;
   border-radius: 12px;
-  transition: 0.3s;
+  border: 1px solid #1f2937;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  border-color: #7c3aed;
-}
-
-/* TAG */
 .tag {
   display: inline-block;
-  padding: 5px 10px;
-  margin: 5px;
+  padding: 6px 10px;
+  background: #1f2937;
+  margin: 4px;
   border-radius: 6px;
-  background: #1e293b;
-}
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 40px;
+  font-size: 12px;
 }
 </style>
-
 </head>
 
 <body>
@@ -133,135 +89,171 @@ h2 {
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Gayathri Chandana Gunimini</h1>
-  <p>Cloud Support Engineer | AWS | Linux | Networking</p>
-  <p>Delivering scalable cloud solutions & troubleshooting distributed systems</p>
+  <h1>Hi, I'm Gayathri 👋</h1>
+  <p>Cloud Analyst | AWS | Linux | DevOps</p>
+  <p>Building scalable systems with cloud, data & real-world engineering experience</p>
 
   <div class="buttons">
     <a href="https://github.com/gayathri02-hub" class="primary">GitHub</a>
     <a href="https://linkedin.com/in/gayathrireddy02" class="secondary">LinkedIn</a>
-    <a href="mailto:gayathrichandana2@gmail.com" class="secondary">Contact</a>
+    <a href="mailto:guniminigayathrims2@gmail.com" class="secondary">Contact</a>
   </div>
 </div>
 
 <!-- ABOUT -->
 <section>
-  <h2>About Me</h2>
-  <p>
-    I am a Cloud Computing postgraduate at the National College of Ireland with a strong foundation in AWS, Linux systems, and cloud-based architectures.
-    I specialize in troubleshooting, system monitoring, and supporting scalable cloud environments.
-  </p>
+<h2>About Me</h2>
 
-  <p>
-    My academic and project experience has equipped me with hands-on knowledge in deploying cloud-based solutions, working with machine learning systems, 
-    and understanding real-world system failures and debugging techniques.
-  </p>
+<p>
+I am a Cloud Computing postgraduate at the National College of Ireland with a strong foundation in cloud infrastructure, distributed systems, and real-time data processing. 
+My academic and project experience bridges Electronics Engineering and modern Cloud technologies.
+</p>
 
-  <p>
-    Alongside my technical background, I bring strong operational and communication skills from my professional experience, enabling me to work effectively in fast-paced environments.
-    I am currently seeking Cloud Support or IT Support roles where I can contribute and grow.
-  </p>
+<p>
+I have hands-on experience in AWS, Docker-based deployments, CI/CD pipelines, and building scalable machine learning solutions. 
+My work focuses on solving real-world problems using data-driven and cloud-native approaches.
+</p>
+
+<p>
+Coming from an Electronics & Communication background, I bring strong knowledge in system-level design, networking, and embedded systems — giving me a deeper understanding of how cloud integrates with real-world hardware systems.
+</p>
+
+<p>
+I am actively seeking roles in Cloud Support, Cloud Operations, or DevOps where I can contribute to infrastructure reliability, system monitoring, and scalable cloud solutions.
+</p>
+
 </section>
 
 <!-- SKILLS -->
 <section>
-  <h2>Technical Skills</h2>
+<h2>Technical Skills</h2>
 
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <b>Cloud</b><br>
-      <span class="tag">AWS</span>
-      <span class="tag">EC2</span>
-      <span class="tag">S3</span>
-      <span class="tag">IAM</span>
-    </div>
+<div class="card">
+<b>Cloud & DevOps</b><br>
+<span class="tag">AWS</span>
+<span class="tag">Docker</span>
+<span class="tag">CI/CD</span>
+<span class="tag">CodePipeline</span>
+<span class="tag">Streamlit</span>
+</div>
 
-    <div class="card">
-      <b>DevOps</b><br>
-      <span class="tag">Docker</span>
-      <span class="tag">Linux</span>
-      <span class="tag">Git</span>
-    </div>
+<div class="card">
+<b>Programming</b><br>
+<span class="tag">Python</span>
+<span class="tag">SQL</span>
+</div>
 
-    <div class="card">
-      <b>Programming</b><br>
-      <span class="tag">Python</span>
-      <span class="tag">SQL</span>
-    </div>
+<div class="card">
+<b>Systems</b><br>
+<span class="tag">Linux</span>
+<span class="tag">Networking</span>
+<span class="tag">Troubleshooting</span>
+</div>
 
-    <div class="card">
-      <b>Support</b><br>
-      <span class="tag">Troubleshooting</span>
-      <span class="tag">Networking</span>
-    </div>
+</div>
+</section>
 
-  </div>
+<!-- ECE + CLOUD BACKGROUND -->
+<section>
+<h2>Core Technical Foundation</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Cloud Engineering Skills</h3>
+<p>AWS infrastructure, containerization using Docker, scalable ML deployment, CI/CD automation, and cloud monitoring.</p>
+</div>
+
+<div class="card">
+<h3>Electronics & Engineering Background</h3>
+<p>VLSI Design, Operating Systems, Network Analysis, Embedded Systems, Communication Systems, Signal Processing.</p>
+</div>
+
+</div>
 </section>
 
 <!-- EXPERIENCE -->
 <section>
-  <h2>Experience</h2>
+<h2>Experience</h2>
 
-  <div class="card">
-    <h3>The Range — Operations Associate</h3>
-    <p>
-      Managed backend systems, inventory processing, and operational workflows.
-      Strengthened attention to detail, system accuracy, and problem-solving under pressure.
-    </p>
-  </div>
+<div class="card">
+<h3>Salesforce Virtual Internship</h3>
+<p>Gained hands-on experience in CRM systems, cloud-based business solutions, and enterprise workflows.</p>
+</div>
 
-  <div class="card">
-    <h3>GIGAMADE — Administrative Assistant</h3>
-    <p>
-      Coordinated client communication, documentation, and reporting.
-      Developed strong organizational, communication, and multitasking skills.
-    </p>
-  </div>
+<div class="card">
+<h3>The Range — Operations Associate</h3>
+<p>Handled real-time operations, problem-solving, and backend support in a fast-paced environment.</p>
+</div>
 
 </section>
 
 <!-- PROJECTS -->
 <section>
-  <h2>Projects</h2>
+<h2>Projects (Cloud-Focused)</h2>
 
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <h3>IoT Botnet Detection</h3>
-      <p>Built ML-based intrusion detection system.</p>
-      <a href="YOUR_LINK">View Project</a>
-    </div>
+<div class="card">
+<h3>IoT Botnet Detection (Thesis)</h3>
+<p>Built ML-based intrusion detection deployed using Docker containers in a simulated cloud-edge environment.</p>
+</div>
 
-    <div class="card">
-      <h3>House Price Prediction</h3>
-      <p>Regression model with visualization.</p>
-      <a href="YOUR_LINK">View Project</a>
-    </div>
+<div class="card">
+<h3>Ireland House Price Prediction</h3>
+<p>Developed regression model and deployed interactive dashboard using Streamlit.</p>
+</div>
 
-  </div>
+<div class="card">
+<h3>Bookshelf Application</h3>
+<p>Implemented CI/CD pipeline using AWS CodePipeline for automated deployment.</p>
+</div>
 
+</div>
+</section>
+
+<!-- ECE PROJECTS -->
+<section>
+<h2>ECE & Hardware Projects (Cloud-Related Foundations)</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Turbo Code Implementation in VLSI</h3>
+<p>
+Designed and implemented Turbo Encoder & Decoder using Verilog HDL for LTE systems. 
+Worked on ASIC-level design, simulation, and performance optimization.
+</p>
+</div>
+
+<div class="card">
+<h3>Smart Dam using IoT</h3>
+<p>
+Built IoT-based real-time monitoring system using ESP32, sensors, and wireless communication. 
+Implemented data collection, remote monitoring, and automated control systems.
+</p>
+</div>
+
+</div>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section>
-  <h2>Certifications</h2>
+<h2>Certifications</h2>
 
-  <div class="card">AWS Academy Cloud Foundations</div>
-  <div class="card">MTA Python Certification</div>
+<div class="card">AWS Certification</div>
+<div class="card">Salesforce Certification</div>
 
 </section>
 
 <!-- CONTACT -->
 <section>
-  <h2>Contact</h2>
-  <p>Email: gayathrichandana2@gmail.com</p>
+<h2>Contact</h2>
+<p>Email: guniminigayathrims2@gmail.com</p>
 </section>
 
-</div>
-
-<div class="footer">
-  <p>© 2026 Gayathri Chandana Gunimini</p>
 </div>
 
 </body>
